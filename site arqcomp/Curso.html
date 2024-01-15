@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detecção de Avarias</title>
+    <link rel="stylesheet" href="css.css">
+
+    <style>
+        /* Reset de estilos para garantir consistência entre navegadores */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo básico para o corpo da página */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            background-color: #f8f8f8;
+            color: #000000;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        header img {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+         /* Estilo para a barra de navegação */
+         nav {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0096fa;
+            transition: width 0.5s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Estilo para a seção de conteúdo principal */
+        .main-content {
+            max-width: 3000px;
+            margin: 20px 20px 20px 0;
+            padding: 40px;
+            background-color: #f8f8f8;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-content h2 {
+            color: #3498db;
+            font-size: 20px;
+            margin-bottom: 28px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .main-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .main-content li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .main-content li::before {
+            content: '\2022';
+            color: #3498db;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Estilo para os serviços oferecidos */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .service {
+            text-align: center;
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .service h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* Estilo para depoimentos */
+        .testimonials {
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 10px 10px;
+        }
+
+        /* Adicione mais estilos conforme necessário */
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Logo do Site">
+        <h1>O Curso</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="BIOS.html">BIOS</a>
+        <a href="Soluções.html">Principais avarias</a>
+        <a href="Arranque.html">Arranque</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="main-content">
+        <h2>Plano de Estudos: </h2>
+        
+            <ul>
+                <li>Português</li>
+                <li> Língua estrangeira</li>
+                <li> Área de Integração</li>
+                <li>Educação Fisíca</li>
+                <li>Fisíca e Química</li>
+                <li>Sistemas Operativos</li>
+                <li>Arquitetura de Computadores</li> 
+                <li>Redes de Comunicação</li> 
+                <li>Programação de Sistemas Informáticos</li> 
+                <li>Formação em contexto de trabalho — 500 Horas</li> 
+                <li>Prova de Aptidão Profissional</li>
+            </ul>
+
+            <br>
+
+            <h2> Algumas saídas profissionais: </h2>
+        
+            <ul>
+                <li> Técnico de Informática</li>
+                <li> Programador de Informática </li>
+                <li>   Técnico de Manutenção — Informática</li>
+                <li>  Empresas de desenvolvimento web</li>
+                <li>  Empresas de serviços para à Internet </li>
+                <li>  Técnico de Software e Hardware </li>
+                <li> Vendedor de Produtos Informáticos</li> 
+                <li>Departamento Informático de Instituições públicas e privadas</li> 
+        
+            </ul>
+
+            <h2> Competências adquiridas: </h2>
+        
+            <ul>
+                <li>Instalação, configuração e manuntença~de computadores </li>
+                <li>Sistemas Operativos cliente e servidor  </li>
+                <li>Segurança em sistemas informáticos  </li>
+                <li>Desenvolvimento e manuntenção de aplicações e base de dados </li>
+                <li>Instalação e configuração de servidores   </li>
+                <li>Desenvolvimento de páginas web   </li>
+                
+        
+            </ul>
+    
+    
+        
+</body>
