@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guia de Montagem de Computador</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo básico para o corpo da página */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            background-color: #f8f8f8;
+            color: #000000;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        header img {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para a barra de navegação */
+        nav {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0096fa;
+            transition: width 0.5s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Estilo para a seção de conteúdo principal */
+        .main-content {
+            max-width: 3000px;
+            margin: 20px 20px 20px 0;
+            padding: 40px;
+            background-color: #f8f8f8;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-content h2 {
+            color: #3498db;
+            font-size: 20px;
+            margin-bottom: 28px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .main-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .main-content li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .main-content li::before {
+            content: '\2022';
+            color: #3498db;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Estilo para os serviços oferecidos */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .service {
+            text-align: center;
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .service h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* Estilo para depoimentos */
+        .testimonials {
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        img {
+            margin: 0 auto;
+            display: block;
+            cursor: pointer; /* Altera o cursor para indicar que a imagem é clicável */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Guia de Montagem de Computador</h1>
+    </header>
+
+    <nav>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="Soluções.html">Soluções</a>
+            <a href="Curso.html">O curso</a>
+            <a href="Arranque.html">Arranque</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    
+    </nav>
+
+    <div class="main-content">
+        <section>
+            <h2>Planejamento e Escolha de Componentes:</h2>
+            <p>Antes de começar, defina o propósito do seu computador. Será para jogos, design gráfico, programação ou tarefas cotidianas?
+            Escolha cuidadosamente cada componente, incluindo processador, placa-mãe, memória RAM, placa de vídeo, armazenamento, fonte de alimentação e gabinete. Certifique-se de que todos os componentes são compatíveis entre si.</p>
+        </section>
+
+        <section>
+            <h2>Preparação do Local de Trabalho:</h2>
+            <p>Encontre um local espaçoso e bem iluminado para trabalhar.
+            Certifique-se de ter uma superfície plana e limpa.</p>
+        </section>
+
+        <section>
+            <h2> Ferramentas Necessárias:</h2>
+            <p>Antes de começar, tenha em mãos todas as ferramentas necessárias, como chaves de fenda, organizadores de cabos, pulseira antiestática e pinças.</p>
+        </section>
+
+        <section>
+            <h2> Descarregamento Estático: </h2>
+            <p>Use uma pulseira antiestática para descarregar eletricidade estática do seu corpo. Isso evita danos aos componentes sensíveis.</p>
+        </section>
+
+        <section>
+            <h2> Montagem da Placa-Mãe:</h2>
+            <p> Instale a placa-mãe no gabinete usando os suportes fornecidos.
+                Conecte o processador, a memória RAM e o cooler do processador na placa-mãe.</p>
+        </section>
+
+        <section>
+            <h2>  Instalação da Fonte de Alimentação:</h2>
+            <p> Monte a fonte de alimentação no gabinete e conecte os cabos de alimentação à placa-mãe, ao processador, à placa de vídeo e aos dispositivos de armazenamento.</p>
+        </section>
+
+        <section>
+            <h2>Conexão dos Cabos: </h2>
+            <p>Conecte os cabos da frente do gabinete à placa-mãe para os botões de energia, LEDs e portas USB.
+                Conecte os cabos SATA para os dispositivos de armazenamento.</p>
+        </section>
+
+        <section>
+            <h2> Instalação da Placa de Vídeo:</h2>
+            <p>Insira a placa de vídeo no slot PCI-Express da placa-mãe.
+                Conecte a placa de vídeo à fonte de alimentação, se necessário. </p>
+        </section>
+
+        <section>
+            <h2>Gerenciamento de Cabos:</h2>
+            <p>Organize os cabos dentro do gabinete para garantir uma boa circulação de ar e uma aparência limpa.</p>
+        </section>
+
+        <section>
+            <h2>Teste Inicial:</h2>
+            <p>Antes de fechar o gabinete, faça um teste inicial para garantir que todos os componentes estejam funcionando corretamente. Certifique-se de que a placa-mãe, a CPU, a RAM, a GPU e o armazenamento estão reconhecidos.</p>
+        </section>
+
+        <section>
+            <h2>Instalação do Sistema Operacional:</h2>
+            <p>Com o hardware configurado, instale o sistema operacional de sua escolha usando um pen drive ou DVD.</p>
+        </section>
+
+        <section>
+            <h2>Atualizações e Drivers:</h2>
+            <p>Após a instalação do sistema operacional, baixe e instale os drivers mais recentes para todos os componentes, incluindo placa-mãe, placa de vídeo e periféricos.</p>
+        </section>
+
+        <section>
+            <h2>Finalização:</h2>
+            <p>Feche o gabinete, conecte os periféricos e aproveite seu novo computador montado!</p>
+        </section>
+
+        
+        <a href="javascript:void(0);" onclick="openFullscreen()">
+            <img id="myImage" src="pc.jpg" alt="Descrição da Imagem">
+        </a>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detecção de Avarias</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        /* Reset de estilos para garantir consistência entre navegadores */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo básico para o corpo da página */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            background-color: #f8f8f8;
+            color: #000000;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        header img {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para a barra de navegação */
+        nav {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0096fa;
+            transition: width 0.5s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Estilo para a seção de conteúdo principal */
+        .main-content {
+            max-width: 3000px;
+            margin: 20px 20px 20px 0;
+            padding: 40px;
+            background-color: #f8f8f8;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-content h2 {
+            color: #3498db;
+            font-size: 20px;
+            margin-bottom: 28px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .main-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .main-content li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .main-content li::before {
+            content: '\2022';
+            color: #3498db;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Estilo para os serviços oferecidos */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .service {
+            text-align: center;
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .service h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* Estilo para depoimentos */
+        .testimonials {
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        .card-container {
+                    display: flex;
+                    gap: 20px; /* Espaçamento entre os cards */
+                    flex-wrap: nowrap;
+                    display: flex;
+                    font-size: 16px;
+                    background-color: #cdcdcd;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+
+                .card {
+                    display: inline-block;
+                    width: 300px;
+                    margin: 0 30px; /* Espaçamento entre os cards */
+                    vertical-align: top; /* Alinha os cards no topo */
+                    font-size: 16px; /* Define a fonte de volta para o tamanho desejado */
+                    box-sizing: border-box; /* Garante que as bordas e o preenchimento não afetem a largura do elemento */
+                }
+
+                .card:hover {
+                    transform: scale(1.05);
+                }
+               
+                .card a {
+                    text-decoration: none;
+                    color: #000000;
+                }
+
+                .card-inner {
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
+                    cursor: pointer;
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                .card-inner:hover {
+                    transform: scale(1.05);
+                }
+
+                .card-inner a {
+                    text-decoration: none;
+                    color: #333;
+                }
+
+        /* Estilo para rodapé */
+        footer {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 10px 10px;
+        }
+
+        /* Adicione mais estilos conforme necessário */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo do Site">
+        <h1>Desvendando o Código dos Problemas</h1>
+    </header>
+
+    <nav>
+        <a href="BIOS.html">BIOS</a>
+        <a href="Soluções.html">Principais Avarias</a>
+        <a href="Curso.html">O curso</a>
+        <a href="Arranque.html">Arranque</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="main-content">
+        <h2>Bem vindo ao DigitalDiagnostic </h2>
+        <p>
+            Você está prestes a mergulhar em uma jornada fascinante no universo da detecção de avarias em computadores.
+            O nosso site é mais do que uma simples plataforma; é a chave para desvendar os mistérios tecnológicos e trazer
+            soluções eficazes para os problemas do seu dispositivo. Aqui está um vislumbre do que você encontrará:
+        </p>
+        <ul>
+            <li><strong>Diagnóstico Avançado:</strong> Descubra como utilizamos ferramentas de diagnóstico de última
+                geração para desvendar os segredos do seu computador. Nossa abordagem avançada permite identificar
+                rapidamente problemas de hardware e software.</li>
+            <li><strong>Especialistas Apaixonados:</strong> Conheça nossa equipe de especialistas apaixonados por
+                tecnologia. Cada membro é dedicado a encontrar soluções inovadoras para garantir que seu computador
+                volte a operar em seu potencial máximo. </li>
+            <li><strong>Soluções Personalizadas:</strong> Acreditamos que cada avaria é única. Nossa abordagem
+                personalizada significa que não oferecemos soluções genéricas, mas sim adaptações precisas para os
+                desafios específicos do seu dispositivo.</li>
+            <li><strong>Transparência e Comunicação:</strong> Mantenha-se informado durante todo o processo. A
+                transparência é a base do nosso serviço, e garantimos uma comunicação clara para que você compreenda
+                cada etapa do diagnóstico e reparo.</li>
+        </ul>
+        <p>
+            Se você está enfrentando problemas com o seu computador, entre em contato conosco para agendar uma
+            avaliação e resolver suas avarias de maneira eficiente.
+        </p>
+    </div>
+
+    <div class="card-container">
+        <div class="card" onclick="redirect()">
+            <a href="montagem.html">
+                <h2>Montagem de Computadores</h2>
+                <p>Saiba mais.</p>
+            </a>
+        </div>
+
+        <div class="card" onclick="redirect('outra_pagina2.html')">
+            <a href="Curso.html">
+                <h2>Sobre o Curso</h2>
+                <p>Clique aqui</p>
+            </a>
+        </div>
+
+        <div class="card" onclick="redirect('outra_pagina2.html')">
+            <a href="Soluções.html">
+                <h2>Problemas e Soluções </h2>
+                <p>Clique aqui para ver as soluções para os problemas mais frequentes.</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Detecção de Avarias em Computadores. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+
+</html>
